@@ -1,0 +1,25 @@
+<form (ngSubmit)=onclick(x) #x="ngForm" >
+  <table class="table">
+    <tr>
+      <td>Name</td>
+      <td><input type="text" name="name" placeholder="Username" class="form-control" ngModel></td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td><input type="email" name="email" placeholder="email" class="form-control" ngModel></td>
+    </tr>
+    <tr>
+      <td>Message</td>
+      <td><input type="text" name="msg" placeholder="Message" class="form-control" ngModel></td>
+    </tr>
+
+    <tr>
+      <td></td>
+      <td><button  type="submit" class="btn btn-danger">submit</button></td>
+    </tr>
+
+
+
+  </table>
+
+</form>
