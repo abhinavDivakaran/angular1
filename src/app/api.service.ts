@@ -13,4 +13,9 @@ export class ApiService {
   }
 
 
+  getData(){
+    return this.http.get("http://localhost:3456/getdata");
+  }
+
+
 }
