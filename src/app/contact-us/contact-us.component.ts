@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-
+import{ApiService} from '../api.service';
 
 @Component({
   selector: 'app-contact-us',
@@ -11,18 +11,22 @@ export class ContactUsComponent implements OnInit {
   getname='';
   getemail='';
   getmessage='';
+  getphno='';
 
 
 
   onclick(data:NgForm){
     console.log(data.value);
-    this.getname=data.value.name;
-    this.getemail=data.value.email;
-    this.getmessage=data.value.msg;
+    
+    this.apiservice.insertdata(data.value).subscribe((response)=>{
+
+      console.log(data.value);
+      alert("sucessfull..");
+    });
 
   }
 
-  constructor() { }
+  constructor(private apiservice:ApiService) { }
 
   ngOnInit() {
   }
