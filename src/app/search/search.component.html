@@ -1,0 +1,42 @@
+<form (ngSubmit)=onsubmit(x) #x="ngForm" >
+        <table class="table">
+          <tr>
+            <label>Name</label>
+            <td><input type="text" name="name" placeholder="Username" class="form-control" ngModel></td>
+          </tr>
+          
+      
+          <tr>
+            <td></td>
+            <td><button  type="submit" class="btn btn-primary">submit</button></td>
+          </tr>
+          <!-- <tr>
+              <td>
+                    <td><form (ngsubmit)=onclick(y) #y="ngForm"></form><button type="text" class="btn btn-danger"></button></form></td>
+              </td>
+          </tr> -->
+      
+      
+      
+        </table>
+      
+      </form>
+
+
+      <table class="table">
+            <tr><th>Name</th><th>Message</th><th>Email</th><th>Mob</th></tr>
+            <tr *ngFor="let data of mydata">
+            <td><input type="text" value="{{data.name}}"></td>
+            <td><input type="text" value="{{data.msg}}"></td>
+            <td><input type="text" value="{{data.email}}"></td>
+            <td><input type="text" value="{{data.phno}}"></td>
+            </tr>
+            <!-- <tr>
+                    <td>
+                            <td><form (ngclick)=onclick(y) #y="ngForm"></form><button type="text" class="btn btn-danger"></button></form></td>
+                      </td>
+            </tr>
+             -->
+            </table>
+
+
