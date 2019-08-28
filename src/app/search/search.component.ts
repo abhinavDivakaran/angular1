@@ -29,10 +29,13 @@ export class SearchComponent implements OnInit {
       this.mydata=response;
     });
   }
+  
 
   ngOnInit() {
    
   }
+
+  
   
 
 }

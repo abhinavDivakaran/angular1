@@ -24,4 +24,9 @@ export class ApiService {
   deletedata(data){
     return this.http.post("http://localhost:3456/delete",data);
   }
+
+
+editdata(data){
+  return this.http.post("http://localhost:3456/edit",data);
+}
 }

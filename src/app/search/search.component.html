@@ -10,14 +10,6 @@
             <td></td>
             <td><button  type="submit" class="btn btn-primary">submit</button></td>
           </tr>
-          <!-- <tr>
-              <td>
-                    <td><form (ngsubmit)=onclick(y) #y="ngForm"></form><button type="text" class="btn btn-danger"></button></form></td>
-              </td>
-          </tr> -->
-      
-      
-      
         </table>
       
       </form>
@@ -25,18 +17,23 @@
 
       <table class="table">
             <tr><th>Name</th><th>Message</th><th>Email</th><th>Mob</th></tr>
-            <tr *ngFor="let data of mydata">
-            <td><input type="text" value="{{data.name}}"></td>
-            <td><input type="text" value="{{data.msg}}"></td>
-            <td><input type="text" value="{{data.email}}"></td>
-            <td><input type="text" value="{{data.phno}}"></td>
-            </tr>
-            <!-- <tr>
-                    <td>
-                            <td><form (ngclick)=onclick(y) #y="ngForm"></form><button type="text" class="btn btn-danger"></button></form></td>
-                      </td>
-            </tr>
-             -->
+        <tr *ngFor="let data of mydata">    
+            <td><input type="text" [{data.name}]="data.name" name="name"></td>
+            <td><input type="text" [{data.msg}]="data.msg" name="msg"></td>
+            <td><input type="text" [{data.email}]="data.email" name="email"></td>
+            <td><input type="text" [{data.phno}]="data.phno" name="phno"></td>
+            </tr> 
+
+
+
+       <!-- <tr *ngFor="let data of mydata">
+        <td><input type="text" [(ngModule)]="data.name" name="name"></td>
+        <td><input type="text" [(ngModule)]="data.msg" name="msg"></td>
+        <td><input type="text" [(ngModule)]="data.email" name="email"></td>
+        </tr> 
+        <tr> --><tr>
+            <td><button class="btn btn-primary" (click)="editbutton()">Edit</button></td>
+        </tr>
             </table>
 
 
